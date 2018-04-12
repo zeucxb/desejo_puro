@@ -8,11 +8,11 @@ use Mix.Config
 # file or create a script for recreating it, since it's
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
-config :scanbu_api, DesejoPuroWeb.Endpoint,
+config :desejo_puro, DesejoPuroWeb.Endpoint,
   secret_key_base: Map.fetch(System.get_env(), "SECRET_KEY_BASE")
 
 # Configure your database
-config :scanbu_api, DesejoPuro.Repo,
+config :desejo_puro, DesejoPuro.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
