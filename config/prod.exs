@@ -15,7 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :desejo_puro, DesejoPuroWeb.Endpoint,
   load_from_system_env: true,
-  url: [scheme: "https", host: System.get_env("API_URL"), port: System.get_env("PORT")],
+  url: [scheme: "https", host: System.get_env("API_URL"), port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
