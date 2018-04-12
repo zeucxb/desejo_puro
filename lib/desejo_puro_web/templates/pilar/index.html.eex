@@ -1,0 +1,26 @@
+<h2>Listing Pilares</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for pilar <- @pilares do %>
+    <tr>
+      <td><%= pilar.nome %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: pilar_path(@conn, :show, pilar), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: pilar_path(@conn, :edit, pilar), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: pilar_path(@conn, :delete, pilar), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Pilar", to: pilar_path(@conn, :new) %></span>

@@ -1,0 +1,19 @@
+<ul class="collapsible popout">
+<%= for pilar <- @pilares do %>
+  <li>
+    <div class="collapsible-header"><i class="material-icons"><%= pilar.icon %></i><%= pilar.nome %></div>
+    <div class="collapsible-body">
+    <%= for licao <- pilar.licoes do %>
+     <div class="collapsible-header"><i class="material-icons">chevron_right</i>
+      <%= link licao.nome, to: page_path(@conn, :index) %>
+     </div> 
+    <%= end %>
+    </div>
+  </li>
+<%= end %>
+</ul>
+
+<script type="text/javascript">
+    var elem = document.querySelector('.collapsible');
+    var instance = M.Collapsible.init(elem);
+</script>

@@ -1,0 +1,13 @@
+<h2>Show Licao</h2>
+
+<ul>
+
+  <li>
+    <strong>Nome:</strong>
+    <%= @licao.nome %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: licao_path(@conn, :edit, @licao) %></span>
+<span><%= link "Back", to: licao_path(@conn, :index) %></span>

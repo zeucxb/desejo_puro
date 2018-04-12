@@ -1,0 +1,26 @@
+<h2>Listing Licoes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for licao <- @licoes do %>
+    <tr>
+      <td><%= licao.nome %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: licao_path(@conn, :show, licao), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: licao_path(@conn, :edit, licao), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: licao_path(@conn, :delete, licao), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Licao", to: licao_path(@conn, :new) %></span>

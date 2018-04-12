@@ -1,0 +1,13 @@
+<h2>Show Pilar</h2>
+
+<ul>
+
+  <li>
+    <strong>Nome:</strong>
+    <%= @pilar.nome %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: pilar_path(@conn, :edit, @pilar) %></span>
+<span><%= link "Back", to: pilar_path(@conn, :index) %></span>

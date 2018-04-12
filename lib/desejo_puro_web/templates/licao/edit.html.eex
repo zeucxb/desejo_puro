@@ -1,0 +1,5 @@
+<h2>Edit Licao</h2>
+
+<%= render "form.html", Map.put(assigns, :action, licao_path(@conn, :update, @licao)) %>
+
+<span><%= link "Back", to: licao_path(@conn, :index) %></span>

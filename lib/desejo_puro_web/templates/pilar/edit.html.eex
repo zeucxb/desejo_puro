@@ -1,0 +1,5 @@
+<h2>Edit Pilar</h2>
+
+<%= render "form.html", Map.put(assigns, :action, pilar_path(@conn, :update, @pilar)) %>
+
+<span><%= link "Back", to: pilar_path(@conn, :index) %></span>
