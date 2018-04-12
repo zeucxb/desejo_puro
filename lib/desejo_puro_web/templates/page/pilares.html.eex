@@ -7,10 +7,10 @@
      <div class="collapsible-header"><i class="material-icons">chevron_right</i>
       <%= link licao.nome, to: page_path(@conn, :index) %>
      </div> 
-    <%= end %>
+    <% end %>
     </div>
   </li>
-<%= end %>
+<% end %>
 </ul>
 
 <script type="text/javascript">
